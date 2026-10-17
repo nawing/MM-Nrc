@@ -1,0 +1,43 @@
+{
+    "name": "@mmpay/mm-nrc",
+    "version": "1.0.0",
+    "description": "Myanmar NRC (National Registration Card) utilities for ESM and CJS",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./dist/esm/index.d.ts",
+                "default": "./dist/esm/index.js"
+            },
+            "require": {
+                "types": "./dist/cjs/index.d.ts",
+                "default": "./dist/cjs/index.js"
+            }
+        }
+    },
+    "scripts": {
+        "build": "tsup src/index.ts --format cjs,esm --dts",
+        "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+        "test": "bun test"
+    },
+    "engines": {
+        "node": "^26.6.5",
+        "bun": ">=1.4.3"
+    },
+    "keywords": [
+        "myanmar",
+        "nrc",
+        "typescript",
+        "esm",
+        "cjs"
+    ],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/bun": "^1.4.3",
+        "tsup": "^8.0.2",
+        "typescript": "^5.3.3"
+    }
+}
