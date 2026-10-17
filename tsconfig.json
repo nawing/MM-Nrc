@@ -9,7 +9,10 @@
         "forceConsistentCasingInFileNames": true,
         "resolveJsonModule": true,
         "declaration": true,
-        "outDir": "./dist"
+        "outDir": "./dist",
+        "types": [
+            "bun"
+        ]
     },
     "include": [
         "src/**/*"
